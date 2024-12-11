@@ -26,7 +26,7 @@ int main()
 	employee o[5];
 	fstream f;
 	int i,n;
-	f.open("gaurav.txt");
+	f.open("example.txt");
 	cout<<"\nHow many employee information do you need to store:";
 	cin>>n;
 	cout<<"\n Enter information of employee in this format(name/id/salary)";
@@ -37,7 +37,7 @@ int main()
 		f.write((char*)&o[i],sizeof o[i]);
 	}
 	f.close();
-	f.open("gaurav.txt");
+	f.open("example.txt");
 	cout<<"\n information of employee is as follows:"<<endl;
 	cout<<"name"<<"   "<<"ID"<<"  "<<"salary"<<endl;
 	for(i=0;i<n;i++)
