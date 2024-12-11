@@ -30,9 +30,9 @@ int main()
 	cout<<"\nHow many employee information do you need to store:";
 	cin>>n;
 	cout<<"\n Enter information of employee in this format(name/id/salary)";
-	for(i=1;i<n;i++)
+	for(i=0;i<n;i++)
 	{
-		cout<<"\nEnter inforamtion of "<<i<<" Employee:"<<endl;
+		cout<<"\nEnter inforamtion of Employee:"<<endl;
 		o[i].accept();
 		f.write((char*)&o[i],sizeof o[i]);
 	}
@@ -40,7 +40,7 @@ int main()
 	f.open("gaurav.txt");
 	cout<<"\n information of employee is as follows:"<<endl;
 	cout<<"name"<<"   "<<"ID"<<"  "<<"salary"<<endl;
-	for(i=1;i<n;i++)
+	for(i=0;i<n;i++)
 	{
 		f.write((char*)&o[i],sizeof o[i]);
 		o[i].display();
