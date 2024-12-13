@@ -44,7 +44,7 @@ complex complex::operator*(complex &c)
 {
 	complex temp;
 	temp.real=(c.real*real)-(img*c.img);
-	temp.img+(real*c.real)+(c.img*img);
+	temp.img=(real*c.img)+(c.real*img);
 	return temp;
 }
 int main()
